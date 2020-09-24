@@ -1,28 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+	  <div class="content" id="timers">
+		  <Timer v-for="(timer, index) in timers" :key="index" />
+		  <button id="addBtn" class="add-timer" @click="addTimer">+</button>
+	  </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Timer from './components/Timer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Timer
+  },
+  data() {
+	  return {
+		  timers: [1]
+	  }
+  },
+  methods: {
+	  addTimer() {
+		  this.timers.push(this.timers.length + 1)
+	  }
   }
 }
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

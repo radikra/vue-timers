@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" display="none">
+
+	<symbol id="play" viewBox="0 0 17 20">
+		<path d="M0 20V0L17 10L0 20Z"/>
+	</symbol>
+
+	<symbol id="pause" viewBox="0 0 10 20">
+		<rect x="7" width="3" height="20"/>
+		<rect width="3" height="20"/>
+	</symbol>
+
+	<symbol id="stop" viewBox="0 0 20 20">
+		<rect width="20" height="20"/>
+	</symbol>
+
+</svg>

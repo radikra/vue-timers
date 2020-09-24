@@ -1,0 +1,74 @@
+@import '_null';
+
+@import '_vars';
+
+@import '_fonts';
+
+@import '_timer';
+
+body {
+    font-family: 'Gotham Pro';
+    font-weight: normal;
+    font-style: normal;
+
+    background: $main-bg;
+}
+
+#app {
+    margin: 72px auto 0;
+}
+
+@media screen and (min-width: 1024px) {
+    #app {
+        max-width: 75.6836vw;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #app {
+        max-width: 65.1042vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #app {
+        max-width: 70.3125vw;
+    }
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 -25px;
+}
+
+@media screen and (max-width: 767px) {
+    .content {
+        align-items: center;
+        flex-direction: column;
+
+        margin: 0;
+    }
+}
+
+.add-timer {
+    font-size: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: $timer-width;
+    height: $timer-height;
+    margin: 0 25px 45px;
+
+    color: $timer-off;
+    background: $timer-bg;
+}
+
+@media screen and (max-width: 767px) {
+    .add-timer {
+        margin: 0 0 45px;
+    }
+}
